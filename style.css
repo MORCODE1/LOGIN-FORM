@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:ital,wght@0,600;0,700;1,600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.form-wrapper{
+    max-width: 670px;
+    margin: 0 auto;
+}
+
+.form-container{
+    display: flex;
+    align-items: stretch;
+    color: #002333;
+}
+
+.form-left{
+    padding: 20px;
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: center;
+    background: url('images/istockphoto-1008220810-612x612.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.form-left::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(240deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)100%);
+}
+
+.content{
+    color: #ffffff;
+    z-index: 9;
+}
+
+.content h3{
+    font-size: 45px;
+    line-height: 45px;
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 50px;
+    letter-spacing: -0.5;
+}
+
+.content h3::after{
+    content: '';
+    width: 80%;
+    height: 6px;
+    position: absolute;
+    background: purple;
+    bottom: -25%;
+    left: 0;
+}
+
+.content p{
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/*form right*/
+
+.form-right{
+    flex-basis: 50%;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.social-login{
+    border-bottom: 2px solid #002333;
+}
+
+.social-item{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    align-items: center;
+    border: 1px solid rgb(57, 70, 73);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.social-item .icon{
+    flex-basis: 20%;
+}
+
+.social-item .icon img{
+    height: 30px;
+    width: 30px;
+    margin-top: 1px;
+}
+
+.social-handle{
+    flex-basis: 80%;
+}
+
+.login-form{
+    padding: 18px;
+}
+
+.user-input input{
+    padding: 8px;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'poppins';
+    font-weight: 500;
+    color: #002333;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid rgb(220, 222, 225);
+}
+
+.user-input input:focus{
+    outline: none;
+    border-color: purple;
+}
+
+.user-input input::placeholder{
+    color: #2c3333;
+    font-size: 14px;
+}
+
+.remember-me{
+    margin-bottom: 15px;
+    padding: 10px 0;
+}
+
+.remember-me label{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.remember-me  label input{
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 1.5px solid purple;
+    border-radius: 4px;
+    position: relative;
+}
+
+.remember-me  label input::before{
+    content: '\2713';
+    font-size: 21px;
+    color: #ffffff;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 3px;
+    top: -4px;
+    visibility: none;
+    opacity: 0; 
+}
+
+.remember-me  label input:checked{
+    background-color: purple;
+}
+
+.remember-me  label input:checked::before{
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn{
+    width: 100%;
+    display: inline-block;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: purple;
+    padding: 0 20px;
+    height: 40px;
+    border: 1px solid #002333;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.fp-link{
+    font-size: 15px;
+    font-weight: 700;
+    color: #002333; 
+    text-decoration: none;
+}
+
+.signup{
+    margin-top: 20px;
+}
+.signup p{
+    font-size: 13px;
+}
+
+.signup p a{
+    font-weight: 700;
+    color: #002333;
+}
+
+.signup p a:hover{
+    color: purple;
+}
+
+
+/*responsive*/
+@media (max-width:678px) {
+    body{
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-wrapper{
+        max-width: 400px;
+        padding-top: 20px;
+    }
+
+    .form-container{
+        position: relative;
+    }
+
+    .form-left .content{
+        display: none;
+    }
+
+    .form-left{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .form-left::before{
+        background: linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+        opacity: 0.5;
+    }
+    .form-right{
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(245, 245, 245, 0.7);
+    }
+}
